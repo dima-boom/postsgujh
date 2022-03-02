@@ -137,7 +137,7 @@ try:
                 grp+=1
             new_sp = vk.groups.getById(group_ids=sp_group, fields="can_post")
             for j in new_sp:
-                if j["can_message"] == 1:
+                if j["can_post"] == 1:
                     itog.append(int(j['id']))
                 else:
                     continue
