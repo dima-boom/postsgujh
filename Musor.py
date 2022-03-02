@@ -137,9 +137,12 @@ try:
                 grp+=1
             new_sp = vk.groups.getById(group_ids=sp_group, fields="can_post")
             for j in new_sp:
-                if j["can_post"] == 1:
-                    itog.append(int(j['id']))
-                else:
+                try:
+                    if j["can_post"] == 1:
+                        itog.append(int(j['id']))
+                    else:
+                        continue
+                 except:
                     continue
         na_b = time.time()
         vr = int(na_b-na_a)
