@@ -142,7 +142,7 @@ try:
                         itog.append(int(j['id']))
                     else:
                         continue
-                 except:
+                except:
                     continue
         na_b = time.time()
         vr = int(na_b-na_a)
